@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-foundation/01-02-PLAN.md
-last_updated: "2026-03-18T05:54:34.808Z"
+stopped_at: Completed 01-foundation/01-03-PLAN.md
+last_updated: "2026-03-18T06:00:29.588Z"
 last_activity: 2026-03-18 — Completed Plan 01-01 (Next.js bootstrap, Prisma 7 schema, Vitest scaffold)
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
   percent: 25
 ---
 
@@ -51,6 +51,7 @@ Progress: [██░░░░░░░░] 25%
 
 *Updated after each plan completion*
 | Phase 01-foundation P02 | 5 | 2 tasks | 11 files |
+| Phase 01-foundation P03 | 4min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: All cookies() calls awaited — Next.js 16 async Headers API requirement
 - [Phase 01-foundation]: verifySession() wrapped in React cache() — deduplicates cookie reads per request cycle
 - [Phase 01-foundation]: tsconfig.json excludes tests/ and restricts typeRoots to local node_modules/@types only
+- [Phase 01-foundation]: base-ui Button has no asChild prop — use styled Link for navigation buttons in admin pages
+- [Phase 01-foundation]: updateCohort.bind(null, id) pattern for passing cohort id to CohortForm in edit page
+- [Phase 01-foundation]: toSlug inline in cohorts.ts — simple enough to not extract to shared utils
 
 ### Pending Todos
 
@@ -83,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T05:54:34.804Z
-Stopped at: Completed 01-foundation/01-02-PLAN.md
+Last session: 2026-03-18T06:00:29.586Z
+Stopped at: Completed 01-foundation/01-03-PLAN.md
 Resume file: None
