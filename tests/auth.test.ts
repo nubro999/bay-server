@@ -9,8 +9,7 @@ vi.mock('@/app/lib/session', () => ({
 describe('Admin login action', () => {
   beforeEach(() => {
     vi.clearAllMocks()
-    // Set a bcrypt hash of "testpassword" — pre-computed
-    process.env.ADMIN_PASSWORD_HASH = '$2b$10$SMCIBEuFhy2PvrukXsWDa.XUJglz.Ku08FBluOtfDoOw/UdOtM.e.'
+    process.env.ADMIN_PASSWORD = 'testpassword'
   })
 
   it('returns error for wrong password', async () => {
