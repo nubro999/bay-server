@@ -40,24 +40,24 @@ patterns-established:
   - "createUpdate.bind(null, { teamId, cohortSlug, hackathonSlug }) pattern for context binding in useActionState"
   - "existingSubmission?.githubUrl ?? '' as defaultValue for controlled pre-fill"
 
-requirements-completed: [PROG-01, PROG-02, PROG-03]
+requirements-completed: [PROG-01, PROG-02, PROG-03, DSGN-01, DSGN-02]
 
 # Metrics
-duration: ~5min
+duration: ~20min
 completed: 2026-03-19
 ---
 
 # Phase 02 Plan 04: UpdateForm + SubmissionForm Summary
 
-**UpdateForm and SubmissionForm client components using useActionState with server action context binding, wired into team detail page with zero-auth posting and upsert pre-fill UX**
+**UpdateForm and SubmissionForm with useActionState + server action context binding, visual verification approved across all public pages including mobile 375px responsiveness**
 
 ## Performance
 
-- **Duration:** ~5 min (continuation of previous session)
+- **Duration:** ~20 min (across two sessions including checkpoint)
 - **Started:** 2026-03-19T00:44:00Z
-- **Completed:** 2026-03-19T00:44:40Z
-- **Tasks:** 1 of 2 complete (Task 2 is visual verification checkpoint)
-- **Files modified:** 3
+- **Completed:** 2026-03-19 (post-checkpoint approval)
+- **Tasks:** 2 of 2 complete
+- **Files modified:** 3 (forms + team detail) + additional fixes during testing
 
 ## Accomplishments
 - UpdateForm client component with textarea (content, required) and text input (link, optional), useActionState bound to createUpdate with team context, per-field validation errors, Post Update/Posting... pending state
@@ -70,6 +70,14 @@ Each task was committed atomically:
 
 1. **Task 1: UpdateForm + SubmissionForm + wire into team detail** - `6a23aff` (feat)
 2. **Auto-fix: remove default Next.js root page** - `a3c964b` (fix)
+3. **Task 2: Visual verification approved** — checkpoint passed (no code commit — user-tested and approved)
+
+**Additional fixes during testing (user-reported):**
+- Removed `onClick` from server component in cohort page (replaced with `z-10` class for pointer events)
+- Simplified admin auth from bcrypt hash comparison to plain password comparison
+- Fixed login redirect from `/admin` to `/admin/cohorts`
+
+**Plan metadata:** `a1e68d7` (docs: complete UpdateForm + SubmissionForm plan)
 
 ## Files Created/Modified
 - `app/ui/public/UpdateForm.tsx` - Client form for posting progress updates via createUpdate server action
@@ -98,15 +106,20 @@ Each task was committed atomically:
 **Impact on plan:** Necessary for correct routing. No scope creep.
 
 ## Issues Encountered
-- None beyond the auto-fixed root page conflict
+- Root page conflict (auto-fixed, see deviations)
+- During visual testing: onClick handler on server component caused error — replaced with z-10 CSS class
+- Admin login: bcrypt hash comparison was failing; simplified to plain password comparison
+- Login redirect pointed to `/admin` instead of `/admin/cohorts` (corrected during testing)
 
 ## User Setup Required
 None - no external service configuration required.
 
 ## Next Phase Readiness
 - All member interaction forms complete: create team, join team, post update, submit project
-- Visual verification checkpoint (Task 2) required before marking DSGN-01 and DSGN-02 requirements complete
-- Ready for Phase 03 (admin experience) once visual approval obtained
+- Visual verification passed: Notion/Linear aesthetic, white background, zinc palette, no shadows, subtle borders (DSGN-01)
+- Mobile 375px verified: no horizontal scroll, tap targets adequate, text readable (DSGN-02)
+- All public pages approved by user
+- Ready for Phase 03 (admin experience)
 
 ---
 *Phase: 02-member-experience*

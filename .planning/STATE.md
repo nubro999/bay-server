@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-member-experience/02-04-PLAN.md (Task 1 done, awaiting Task 2 visual checkpoint)
-last_updated: "2026-03-18T15:45:56.408Z"
-last_activity: 2026-03-18 — Completed Plan 01-01 (Next.js bootstrap, Prisma 7 schema, Vitest scaffold)
+stopped_at: Completed 02-member-experience/02-04-PLAN.md — Phase 2 complete, all public pages approved
+last_updated: "2026-03-19T00:00:00Z"
+last_activity: 2026-03-19 — Completed Plan 02-04 (UpdateForm + SubmissionForm, visual verification approved)
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 8
   completed_plans: 8
-  percent: 25
+  percent: 50
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation)
-Plan: 1 of 4 in current phase
-Status: In progress
-Last activity: 2026-03-18 — Completed Plan 01-01 (Next.js bootstrap, Prisma 7 schema, Vitest scaffold)
+Phase: 2 of 4 (Member Experience) — complete
+Plan: All 4 plans complete
+Status: Phase 2 complete; Phase 3 (Admin Management) next
+Last activity: 2026-03-19 — Completed Plan 02-04 (UpdateForm + SubmissionForm, visual checkpoint approved)
 
-Progress: [██░░░░░░░░] 25%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
@@ -88,6 +88,8 @@ Recent decisions affecting current work:
 - [Phase 02-member-experience]: Cohort-scoped hackathon lookup enforced across all public pages (CHRT-02): findFirst with cohortId filter
 - [Phase 02-member-experience]: Both UpdateForm and SubmissionForm always visible with no auth gate — zero-friction posting is core product value
 - [Phase 02-member-experience]: SubmissionForm pre-fills from existingSubmission prop enabling upsert UX without page reload
+- [02-04]: Admin auth simplified to plain password comparison — bcrypt hash was causing login failures during testing
+- [02-04]: Login redirect corrected to /admin/cohorts (not /admin) — /admin has no page, cohorts list is the landing
 
 ### Pending Todos
 
@@ -101,6 +103,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T15:45:51.747Z
-Stopped at: Completed 02-member-experience/02-04-PLAN.md (Task 1 done, awaiting Task 2 visual checkpoint)
+Last session: 2026-03-19T00:00:00Z
+Stopped at: Completed 02-member-experience/02-04-PLAN.md — Phase 2 fully complete, visual checkpoint approved
 Resume file: None

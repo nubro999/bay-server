@@ -20,10 +20,10 @@
 
 ### Team
 
-- [ ] **TEAM-01**: Member can create a team with a name within a hackathon
-- [ ] **TEAM-02**: Member can join a team by entering name and role (max 5 per team)
+- [x] **TEAM-01**: Member can create a team with a name within a hackathon
+- [x] **TEAM-02**: Member can join a team by entering name and role (max 5 per team)
 - [x] **TEAM-03**: Team browser shows all teams with member count and open spots
-- [ ] **TEAM-04**: Team detail page shows members, progress updates, and submission
+- [x] **TEAM-04**: Team detail page shows members, progress updates, and submission
 - [x] **TEAM-05**: Team status indicators (member count, submission status, update recency)
 
 ### Progress
@@ -78,10 +78,10 @@
 | HACK-02 | Phase 2 | Complete |
 | HACK-03 | Phase 2 | Complete |
 | HACK-04 | Phase 2 | Complete |
-| TEAM-01 | Phase 2 | Pending |
-| TEAM-02 | Phase 2 | Pending |
+| TEAM-01 | Phase 2 | Complete |
+| TEAM-02 | Phase 2 | Complete |
 | TEAM-03 | Phase 2 | Complete |
-| TEAM-04 | Phase 2 | Pending |
+| TEAM-04 | Phase 2 | Complete |
 | TEAM-05 | Phase 2 | Complete |
 | PROG-01 | Phase 2 | Complete |
 | PROG-02 | Phase 2 | Complete |
@@ -100,4 +100,4 @@
 
 ---
 *Requirements defined: 2026-03-18*
-*Last updated: 2026-03-18 after roadmap creation — all 21 requirements mapped*
+*Last updated: 2026-03-19 after Phase 2 completion — TEAM-01, TEAM-02, TEAM-04 marked complete*

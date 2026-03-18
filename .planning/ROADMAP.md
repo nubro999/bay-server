@@ -13,7 +13,7 @@ BAY Server ships in four phases. Phase 1 establishes the schema and admin founda
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Schema, admin auth, and admin CRUD bootstrapping (completed 2026-03-18)
-- [ ] **Phase 2: Member Experience** - Public hackathon browsing, team joining, progress, and submission
+- [x] **Phase 2: Member Experience** - Public hackathon browsing, team joining, progress, and submission (completed 2026-03-19)
 - [ ] **Phase 3: Admin Management** - Team and member management UI for admin leads
 - [ ] **Phase 4: Cohort Archive** - Read-only past cohort views and UX polish
 
@@ -53,8 +53,8 @@ Plans:
 Plans:
 - [x] 02-01-PLAN.md — Zod schemas, Server Actions (createTeam, joinTeam, createUpdate, upsertSubmission), and unit tests
 - [x] 02-02-PLAN.md — Public layout, cohort list, cohort landing, hackathon page with countdown and team browser
-- [ ] 02-03-PLAN.md — Create team page, team detail page with members/updates/submission, join team form
-- [ ] 02-04-PLAN.md — Progress update and submission forms, visual design verification checkpoint
+- [x] 02-03-PLAN.md — Create team page, team detail page with members/updates/submission, join team form
+- [x] 02-04-PLAN.md — Progress update and submission forms, visual design verification checkpoint
 
 ### Phase 3: Admin Management
 **Goal**: Admin leads can manage teams and members through the admin UI — removing ghost members, editing teams, and overseeing submissions
@@ -84,6 +84,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-03-18 |
-| 2. Member Experience | 1/4 | In progress | - |
+| 2. Member Experience | 4/4 | Complete | 2026-03-19 |
 | 3. Admin Management | 0/TBD | Not started | - |
 | 4. Cohort Archive | 0/TBD | Not started | - |
