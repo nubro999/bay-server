@@ -34,6 +34,7 @@ export default async function TeamDetailPage({
 
   const isFull = team.members.length >= 5
   const openSpots = 5 - team.members.length
+  const isArchived = !team.hackathon.cohort.isActive
 
   return (
     <div>
@@ -52,6 +53,15 @@ export default async function TeamDetailPage({
         <span className="text-zinc-300">/</span>
         <span className="text-zinc-700">{team.name}</span>
       </nav>
+
+      {/* Archive notice */}
+      {isArchived && (
+        <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 mb-6">
+          <p className="text-sm text-amber-800">
+            This cohort has been archived. You are viewing a read-only record.
+          </p>
+        </div>
+      )}
 
       {/* Team header */}
       <div className="mb-8">
@@ -106,18 +116,20 @@ export default async function TeamDetailPage({
         )}
       </div>
 
-      {/* Join form — always rendered; JoinTeamForm disables itself when isFull */}
-      <div className="border-t border-zinc-100 pt-6 mt-6">
-        <h2 className="text-base font-medium text-zinc-900 mb-4">Join this Team</h2>
-        <div className="max-w-sm">
-          <JoinTeamForm
-            teamId={teamId}
-            cohortSlug={cohortSlug}
-            hackathonSlug={hackathonSlug}
-            isFull={isFull}
-          />
+      {/* Join form — hidden for archived cohorts */}
+      {!isArchived && (
+        <div className="border-t border-zinc-100 pt-6 mt-6">
+          <h2 className="text-base font-medium text-zinc-900 mb-4">Join this Team</h2>
+          <div className="max-w-sm">
+            <JoinTeamForm
+              teamId={teamId}
+              cohortSlug={cohortSlug}
+              hackathonSlug={hackathonSlug}
+              isFull={isFull}
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Weekly updates */}
       <div className="border-t border-zinc-100 pt-6 mt-6">
@@ -151,17 +163,19 @@ export default async function TeamDetailPage({
         )}
       </div>
 
-      {/* Post an update */}
-      <div className="border-t border-zinc-100 pt-6 mt-6">
-        <h2 className="text-base font-medium text-zinc-900 mb-4">Post an Update</h2>
-        <div className="max-w-sm">
-          <UpdateForm
-            teamId={teamId}
-            cohortSlug={cohortSlug}
-            hackathonSlug={hackathonSlug}
-          />
+      {/* Post an update — hidden for archived cohorts */}
+      {!isArchived && (
+        <div className="border-t border-zinc-100 pt-6 mt-6">
+          <h2 className="text-base font-medium text-zinc-900 mb-4">Post an Update</h2>
+          <div className="max-w-sm">
+            <UpdateForm
+              teamId={teamId}
+              cohortSlug={cohortSlug}
+              hackathonSlug={hackathonSlug}
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Submission */}
       <div className="border-t border-zinc-100 pt-6 mt-6">
@@ -195,19 +209,22 @@ export default async function TeamDetailPage({
           <p className="text-sm text-zinc-500">No submission yet.</p>
         )}
 
-        <div className="border-t border-zinc-100 pt-6 mt-6">
-          <h3 className="text-sm font-medium text-zinc-900 mb-4">
-            {team.submission ? 'Update Submission' : 'Submit Project'}
-          </h3>
-          <div className="max-w-sm">
-            <SubmissionForm
-              teamId={teamId}
-              cohortSlug={cohortSlug}
-              hackathonSlug={hackathonSlug}
-              existingSubmission={team.submission}
-            />
+        {/* Submission form — hidden for archived cohorts */}
+        {!isArchived && (
+          <div className="border-t border-zinc-100 pt-6 mt-6">
+            <h3 className="text-sm font-medium text-zinc-900 mb-4">
+              {team.submission ? 'Update Submission' : 'Submit Project'}
+            </h3>
+            <div className="max-w-sm">
+              <SubmissionForm
+                teamId={teamId}
+                cohortSlug={cohortSlug}
+                hackathonSlug={hackathonSlug}
+                existingSubmission={team.submission}
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

@@ -18,6 +18,10 @@ export default async function CreateTeamPage({
     notFound()
   }
 
+  if (!cohort.isActive) {
+    notFound()
+  }
+
   const hackathon = await prisma.hackathon.findFirst({
     where: {
       slug: hackathonSlug,
