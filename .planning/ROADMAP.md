@@ -51,8 +51,8 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Zod schemas, Server Actions (createTeam, joinTeam, createUpdate, upsertSubmission), and unit tests
-- [ ] 02-02-PLAN.md — Public layout, cohort list, cohort landing, hackathon page with countdown and team browser
+- [x] 02-01-PLAN.md — Zod schemas, Server Actions (createTeam, joinTeam, createUpdate, upsertSubmission), and unit tests
+- [x] 02-02-PLAN.md — Public layout, cohort list, cohort landing, hackathon page with countdown and team browser
 - [ ] 02-03-PLAN.md — Create team page, team detail page with members/updates/submission, join team form
 - [ ] 02-04-PLAN.md — Progress update and submission forms, visual design verification checkpoint
 
@@ -84,6 +84,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-03-18 |
-| 2. Member Experience | 0/4 | Planning complete | - |
+| 2. Member Experience | 1/4 | In progress | - |
 | 3. Admin Management | 0/TBD | Not started | - |
 | 4. Cohort Archive | 0/TBD | Not started | - |
