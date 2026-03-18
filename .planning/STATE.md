@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: "Completed 01-foundation/01-01-PLAN.md"
-last_updated: "2026-03-18T05:45:25Z"
-last_activity: 2026-03-18 — Completed Plan 01-01 (project bootstrap + schema + test scaffold)
+status: executing
+stopped_at: Completed 01-foundation/01-02-PLAN.md
+last_updated: "2026-03-18T05:54:34.808Z"
+last_activity: 2026-03-18 — Completed Plan 01-01 (Next.js bootstrap, Prisma 7 schema, Vitest scaffold)
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
+  completed_plans: 2
   percent: 25
 ---
 
@@ -50,6 +50,7 @@ Progress: [██░░░░░░░░] 25%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-foundation P02 | 5 | 2 tasks | 11 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,10 @@ Recent decisions affecting current work:
 - [01-01]: Prisma 7 datasource url removed from schema.prisma entirely — prisma.config.ts owns all DB config
 - [01-01]: Migration pending live DB config — DATABASE_URL placeholder until Neon is configured (verified in Plan 05)
 - [01-01]: Generator uses default prisma-client-js without custom output path
+- [Phase 01-foundation]: proxy.ts at project root with export function proxy (not middleware.ts) per Next.js 16 breaking change
+- [Phase 01-foundation]: All cookies() calls awaited — Next.js 16 async Headers API requirement
+- [Phase 01-foundation]: verifySession() wrapped in React cache() — deduplicates cookie reads per request cycle
+- [Phase 01-foundation]: tsconfig.json excludes tests/ and restricts typeRoots to local node_modules/@types only
 
 ### Pending Todos
 
@@ -78,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T05:45:25Z
-Stopped at: Completed 01-foundation/01-01-PLAN.md
-Resume file: .planning/phases/01-foundation/01-02-PLAN.md
+Last session: 2026-03-18T05:54:34.804Z
+Stopped at: Completed 01-foundation/01-02-PLAN.md
+Resume file: None
