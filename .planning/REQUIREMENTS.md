@@ -13,18 +13,18 @@
 
 ### Hackathon
 
-- [ ] **HACK-01**: Each hackathon has a title, description, start/end dates, and external link
-- [ ] **HACK-02**: Cohort landing page shows all hackathon tracks (EVM, Solana, Grants)
-- [ ] **HACK-03**: Hackathon page shows deadline countdown
-- [ ] **HACK-04**: External platform link (Colosseum, XRPL Korea) displayed prominently
+- [x] **HACK-01**: Each hackathon has a title, description, start/end dates, and external link
+- [x] **HACK-02**: Cohort landing page shows all hackathon tracks (EVM, Solana, Grants)
+- [x] **HACK-03**: Hackathon page shows deadline countdown
+- [x] **HACK-04**: External platform link (Colosseum, XRPL Korea) displayed prominently
 
 ### Team
 
 - [ ] **TEAM-01**: Member can create a team with a name within a hackathon
 - [ ] **TEAM-02**: Member can join a team by entering name and role (max 5 per team)
-- [ ] **TEAM-03**: Team browser shows all teams with member count and open spots
+- [x] **TEAM-03**: Team browser shows all teams with member count and open spots
 - [ ] **TEAM-04**: Team detail page shows members, progress updates, and submission
-- [ ] **TEAM-05**: Team status indicators (member count, submission status, update recency)
+- [x] **TEAM-05**: Team status indicators (member count, submission status, update recency)
 
 ### Progress
 
@@ -41,8 +41,8 @@
 
 ### Design
 
-- [ ] **DSGN-01**: Minimal white design — clean, Notion/Linear aesthetic
-- [ ] **DSGN-02**: Mobile-responsive layout
+- [x] **DSGN-01**: Minimal white design — clean, Notion/Linear aesthetic
+- [x] **DSGN-02**: Mobile-responsive layout
 
 ## v2 Requirements
 
@@ -74,15 +74,15 @@
 | CHRT-01 | Phase 1 | Complete |
 | CHRT-02 | Phase 1 | Complete |
 | CHRT-03 | Phase 4 | Pending |
-| HACK-01 | Phase 2 | Pending |
-| HACK-02 | Phase 2 | Pending |
-| HACK-03 | Phase 2 | Pending |
-| HACK-04 | Phase 2 | Pending |
+| HACK-01 | Phase 2 | Complete |
+| HACK-02 | Phase 2 | Complete |
+| HACK-03 | Phase 2 | Complete |
+| HACK-04 | Phase 2 | Complete |
 | TEAM-01 | Phase 2 | Pending |
 | TEAM-02 | Phase 2 | Pending |
-| TEAM-03 | Phase 2 | Pending |
+| TEAM-03 | Phase 2 | Complete |
 | TEAM-04 | Phase 2 | Pending |
-| TEAM-05 | Phase 2 | Pending |
+| TEAM-05 | Phase 2 | Complete |
 | PROG-01 | Phase 2 | Pending |
 | PROG-02 | Phase 2 | Pending |
 | PROG-03 | Phase 2 | Pending |
@@ -90,8 +90,8 @@
 | ADMN-02 | Phase 1 | Complete |
 | ADMN-03 | Phase 3 | Pending |
 | ADMN-04 | Phase 1 | Complete |
-| DSGN-01 | Phase 2 | Pending |
-| DSGN-02 | Phase 2 | Pending |
+| DSGN-01 | Phase 2 | Complete |
+| DSGN-02 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 21 total
