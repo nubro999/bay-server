@@ -67,8 +67,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Admin team Server Actions (updateTeam, deleteTeam, removeMember) and teams list page with member management
-- [ ] 03-02-PLAN.md — Team edit page, submissions overview page, and visual verification checkpoint
+- [x] 03-01-PLAN.md — Admin team Server Actions (updateTeam, deleteTeam, removeMember) and teams list page with member management
+- [x] 03-02-PLAN.md — Team edit page, submissions overview page, and visual verification checkpoint
 
 ### Phase 4: Cohort Archive
 **Goal**: Past cohort data is permanently accessible as a read-only record — institutional memory for BAY survives across cohort cycles
@@ -78,7 +78,11 @@ Plans:
   1. Navigating to a past cohort (e.g. "17th BAY") shows its hackathons, teams, updates, and submissions in read-only form
   2. No create/join/update actions are available on archived cohort pages
   3. The active cohort and archived cohorts are visually distinct so members cannot confuse them
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Schema isActive field, admin archive toggle, public cohort list visual distinction
+- [ ] 04-02-PLAN.md — Read-only enforcement on all public action pages, visual verification checkpoint
 
 ## Progress
 
@@ -90,4 +94,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 4/4 | Complete   | 2026-03-18 |
 | 2. Member Experience | 4/4 | Complete | 2026-03-19 |
 | 3. Admin Management | 2/2 | Complete   | 2026-03-18 |
-| 4. Cohort Archive | 0/TBD | Not started | - |
+| 4. Cohort Archive | 0/2 | Not started | - |
