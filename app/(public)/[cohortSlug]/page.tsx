@@ -34,6 +34,14 @@ export default async function CohortPage({
         </p>
       </div>
 
+      {!cohort.isActive && (
+        <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 mb-6">
+          <p className="text-sm text-amber-800">
+            This cohort has been archived. You are viewing a read-only record.
+          </p>
+        </div>
+      )}
+
       {cohort.hackathons.length === 0 ? (
         <p className="text-zinc-500 text-sm">No hackathon tracks yet.</p>
       ) : (
