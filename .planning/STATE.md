@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-member-experience/02-02-PLAN.md
-last_updated: "2026-03-18T07:16:19.746Z"
-last_activity: 2026-03-18 — Completed Plan 02-01 (Zod schemas, server actions, Countdown component, 35 tests passing)
+stopped_at: Completed 02-member-experience/02-04-PLAN.md (Task 1 done, awaiting Task 2 visual checkpoint)
+last_updated: "2026-03-18T15:45:56.408Z"
+last_activity: 2026-03-18 — Completed Plan 01-01 (Next.js bootstrap, Prisma 7 schema, Vitest scaffold)
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 8
-  completed_plans: 5
+  completed_plans: 8
   percent: 25
 ---
 
@@ -86,6 +86,8 @@ Recent decisions affecting current work:
 - [Phase 02-member-experience]: Countdown stub created inline — Plan 02-01 overwrites with real interval-based implementation
 - [Phase 02-member-experience]: TeamCard is pure Server Component — no client interactivity needed for display
 - [Phase 02-member-experience]: Cohort-scoped hackathon lookup enforced across all public pages (CHRT-02): findFirst with cohortId filter
+- [Phase 02-member-experience]: Both UpdateForm and SubmissionForm always visible with no auth gate — zero-friction posting is core product value
+- [Phase 02-member-experience]: SubmissionForm pre-fills from existingSubmission prop enabling upsert UX without page reload
 
 ### Pending Todos
 
@@ -99,6 +101,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T07:16:19.744Z
-Stopped at: Completed 02-member-experience/02-02-PLAN.md
+Last session: 2026-03-18T15:45:51.747Z
+Stopped at: Completed 02-member-experience/02-04-PLAN.md (Task 1 done, awaiting Task 2 visual checkpoint)
 Resume file: None

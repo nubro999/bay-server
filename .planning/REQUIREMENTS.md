@@ -28,9 +28,9 @@
 
 ### Progress
 
-- [ ] **PROG-01**: Team member can post weekly progress update (text + optional link)
-- [ ] **PROG-02**: Updates displayed chronologically on team detail page
-- [ ] **PROG-03**: Team can submit final deliverable (GitHub link + writeup)
+- [x] **PROG-01**: Team member can post weekly progress update (text + optional link)
+- [x] **PROG-02**: Updates displayed chronologically on team detail page
+- [x] **PROG-03**: Team can submit final deliverable (GitHub link + writeup)
 
 ### Admin
 
@@ -83,9 +83,9 @@
 | TEAM-03 | Phase 2 | Complete |
 | TEAM-04 | Phase 2 | Pending |
 | TEAM-05 | Phase 2 | Complete |
-| PROG-01 | Phase 2 | Pending |
-| PROG-02 | Phase 2 | Pending |
-| PROG-03 | Phase 2 | Pending |
+| PROG-01 | Phase 2 | Complete |
+| PROG-02 | Phase 2 | Complete |
+| PROG-03 | Phase 2 | Complete |
 | ADMN-01 | Phase 1 | Complete |
 | ADMN-02 | Phase 1 | Complete |
 | ADMN-03 | Phase 3 | Pending |
