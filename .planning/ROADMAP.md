@@ -64,7 +64,11 @@ Plans:
   1. Admin can remove a member from any team (ghost member cleanup)
   2. Admin can edit a team name and delete a team from the admin panel
   3. Admin can view all submissions across all teams in a single admin view
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Admin team Server Actions (updateTeam, deleteTeam, removeMember) and teams list page with member management
+- [ ] 03-02-PLAN.md — Team edit page, submissions overview page, and visual verification checkpoint
 
 ### Phase 4: Cohort Archive
 **Goal**: Past cohort data is permanently accessible as a read-only record — institutional memory for BAY survives across cohort cycles
@@ -85,5 +89,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-03-18 |
 | 2. Member Experience | 4/4 | Complete | 2026-03-19 |
-| 3. Admin Management | 0/TBD | Not started | - |
+| 3. Admin Management | 0/2 | In progress | - |
 | 4. Cohort Archive | 0/TBD | Not started | - |
