@@ -71,33 +71,33 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CHRT-01 | — | Pending |
-| CHRT-02 | — | Pending |
-| CHRT-03 | — | Pending |
-| HACK-01 | — | Pending |
-| HACK-02 | — | Pending |
-| HACK-03 | — | Pending |
-| HACK-04 | — | Pending |
-| TEAM-01 | — | Pending |
-| TEAM-02 | — | Pending |
-| TEAM-03 | — | Pending |
-| TEAM-04 | — | Pending |
-| TEAM-05 | — | Pending |
-| PROG-01 | — | Pending |
-| PROG-02 | — | Pending |
-| PROG-03 | — | Pending |
-| ADMN-01 | — | Pending |
-| ADMN-02 | — | Pending |
-| ADMN-03 | — | Pending |
-| ADMN-04 | — | Pending |
-| DSGN-01 | — | Pending |
-| DSGN-02 | — | Pending |
+| CHRT-01 | Phase 1 | Pending |
+| CHRT-02 | Phase 1 | Pending |
+| CHRT-03 | Phase 4 | Pending |
+| HACK-01 | Phase 2 | Pending |
+| HACK-02 | Phase 2 | Pending |
+| HACK-03 | Phase 2 | Pending |
+| HACK-04 | Phase 2 | Pending |
+| TEAM-01 | Phase 2 | Pending |
+| TEAM-02 | Phase 2 | Pending |
+| TEAM-03 | Phase 2 | Pending |
+| TEAM-04 | Phase 2 | Pending |
+| TEAM-05 | Phase 2 | Pending |
+| PROG-01 | Phase 2 | Pending |
+| PROG-02 | Phase 2 | Pending |
+| PROG-03 | Phase 2 | Pending |
+| ADMN-01 | Phase 1 | Pending |
+| ADMN-02 | Phase 1 | Pending |
+| ADMN-03 | Phase 3 | Pending |
+| ADMN-04 | Phase 1 | Pending |
+| DSGN-01 | Phase 2 | Pending |
+| DSGN-02 | Phase 2 | Pending |
 
 **Coverage:**
 - v1 requirements: 21 total
-- Mapped to phases: 0
-- Unmapped: 21 ⚠️
+- Mapped to phases: 21
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-18*
-*Last updated: 2026-03-18 after initial definition*
+*Last updated: 2026-03-18 after roadmap creation — all 21 requirements mapped*
