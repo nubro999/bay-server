@@ -10,7 +10,7 @@ describe('Admin login action', () => {
   beforeEach(() => {
     vi.clearAllMocks()
     // Set a bcrypt hash of "testpassword" — pre-computed
-    process.env.ADMIN_PASSWORD_HASH = '$2b$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy'
+    process.env.ADMIN_PASSWORD_HASH = '$2b$10$SMCIBEuFhy2PvrukXsWDa.XUJglz.Ku08FBluOtfDoOw/UdOtM.e.'
   })
 
   it('returns error for wrong password', async () => {
@@ -22,7 +22,8 @@ describe('Admin login action', () => {
   })
 
   it('calls createSession for correct password (testpassword)', async () => {
-    const { createSession } = await import('@/app/lib/session')
+    // Import both from the same already-mocked module to get the same spy reference
+    const sessionModule = await import('@/app/lib/session')
     const { login } = await import('@/app/actions/auth')
     const formData = new FormData()
     formData.set('password', 'testpassword')
@@ -31,6 +32,6 @@ describe('Admin login action', () => {
     } catch {
       // redirect() throws — expected
     }
-    expect(createSession).toHaveBeenCalled()
+    expect(sessionModule.createSession).toHaveBeenCalled()
   })
 })
