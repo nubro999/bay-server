@@ -31,6 +31,23 @@ export async function createCohort(state: unknown, formData: FormData) {
   redirect('/admin/cohorts')
 }
 
+export async function toggleCohortArchive(id: string) {
+  await verifySession()
+
+  const cohort = await prisma.cohort.findUnique({ where: { id } })
+  if (!cohort) {
+    return { error: 'Cohort not found' }
+  }
+
+  await prisma.cohort.update({
+    where: { id },
+    data: { isActive: !cohort.isActive },
+  })
+
+  revalidatePath('/admin/cohorts')
+  revalidatePath('/')
+}
+
 export async function updateCohort(id: string, state: unknown, formData: FormData) {
   await verifySession()
 

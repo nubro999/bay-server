@@ -16,6 +16,7 @@ model Cohort {
   name        String                          // "17th BAY"
   slug        String      @unique             // "17th-bay" — used in public URLs
   orderIndex  Int         @default(0)         // Admin-controlled display order
+  isActive    Boolean     @default(true)      // false = archived
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
 
