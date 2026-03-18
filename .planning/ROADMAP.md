@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Bootstrap: Next.js 16, Prisma 7 schema (6 entities), Vitest test scaffold
+- [x] 01-01-PLAN.md — Bootstrap: Next.js 16, Prisma 7 schema (6 entities), Vitest test scaffold
 - [ ] 01-02-PLAN.md — Admin auth: jose JWT session, proxy.ts route guard, login/logout flow
 - [ ] 01-03-PLAN.md — Cohort CRUD: createCohort, updateCohort Server Actions and admin UI pages
 - [ ] 01-04-PLAN.md — Hackathon CRUD: createHackathon, updateHackathon, deleteHackathon and admin UI pages
@@ -77,7 +77,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/4 | Planned | - |
+| 1. Foundation | 1/4 | In progress | - |
 | 2. Member Experience | 0/TBD | Not started | - |
 | 3. Admin Management | 0/TBD | Not started | - |
 | 4. Cohort Archive | 0/TBD | Not started | - |

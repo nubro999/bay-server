@@ -7,8 +7,8 @@
 
 ### Cohort
 
-- [ ] **CHRT-01**: Admin can create cohorts (e.g. "17th BAY", "18th BAY")
-- [ ] **CHRT-02**: All hackathons, teams, and data are scoped to a cohort
+- [x] **CHRT-01**: Admin can create cohorts (e.g. "17th BAY", "18th BAY")
+- [x] **CHRT-02**: All hackathons, teams, and data are scoped to a cohort
 - [ ] **CHRT-03**: Past cohorts are viewable as read-only archive
 
 ### Hackathon
@@ -71,8 +71,8 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CHRT-01 | Phase 1 | Pending |
-| CHRT-02 | Phase 1 | Pending |
+| CHRT-01 | Phase 1 | Complete |
+| CHRT-02 | Phase 1 | Complete |
 | CHRT-03 | Phase 4 | Pending |
 | HACK-01 | Phase 2 | Pending |
 | HACK-02 | Phase 2 | Pending |
