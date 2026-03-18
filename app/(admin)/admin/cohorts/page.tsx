@@ -42,7 +42,7 @@ export default async function AdminCohortsPage() {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <form action={toggleCohortArchive.bind(null, cohort.id)}>
+                <form action={toggleCohortArchive.bind(null, cohort.id) as unknown as () => void}>
                   <button
                     type="submit"
                     className={
