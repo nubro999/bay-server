@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 03-02-PLAN.md
-last_updated: "2026-03-18T17:01:00.524Z"
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-18T17:13:56.410Z"
 last_activity: 2026-03-19 — Completed Plan 03-02 (TeamForm, team edit page, submissions overview; visual verification approved)
 progress:
   total_phases: 4
   completed_phases: 3
-  total_plans: 10
-  completed_plans: 10
+  total_plans: 12
+  completed_plans: 11
   percent: 100
 ---
 
@@ -57,6 +57,7 @@ Progress: [██████████] 100%
 | Phase 02-member-experience P02 | 8min | 2 tasks | 6 files |
 | Phase 03-admin-management P01 | 3min | 2 tasks | 3 files |
 | Phase 03-admin-management P02 | 2min | 2 tasks | 3 files |
+| Phase 04-cohort-archive P01 | 2min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -95,6 +96,8 @@ Recent decisions affecting current work:
 - [Phase 03-admin-management]: removeMember takes both memberId and teamId — DB only needs memberId but UI binds both via .bind(null, m.id, team.id)
 - [Phase 03-admin-management]: Teams page has no create button — teams are created by participants via public join flow, not by admins
 - [Phase 03-admin-management]: TeamForm uses typed TeamFormState — consistent with typed action signature from admin-teams.ts
+- [Phase 04-cohort-archive]: toggleCohortArchive form action uses type cast (as unknown as () => void) since HTML form actions cannot surface non-void return values
+- [Phase 04-cohort-archive]: prisma generate must be run after db push — client types are not updated by db push alone
 
 ### Pending Todos
 
@@ -108,6 +111,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T16:57:04.538Z
-Stopped at: Completed 03-02-PLAN.md
+Last session: 2026-03-18T17:13:56.405Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None

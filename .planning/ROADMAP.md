@@ -94,4 +94,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 4/4 | Complete   | 2026-03-18 |
 | 2. Member Experience | 4/4 | Complete | 2026-03-19 |
 | 3. Admin Management | 2/2 | Complete   | 2026-03-18 |
-| 4. Cohort Archive | 0/2 | Not started | - |
+| 4. Cohort Archive | 1/2 | In Progress|  |
