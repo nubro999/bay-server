@@ -1,0 +1,104 @@
+// prisma/schema.prisma
+// Full 6-entity cohort-scoped schema for BAY Server
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+// Note: datasource url is managed by prisma.config.ts (Prisma 7)
+// The env("DATABASE_URL") here is for IDE tooling; prisma.config.ts takes precedence at runtime
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Cohort {
+  id          String      @id @default(cuid())
+  name        String                          // "17th BAY"
+  slug        String      @unique             // "17th-bay" — used in public URLs
+  orderIndex  Int         @default(0)         // Admin-controlled display order
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  hackathons  Hackathon[]
+
+  @@map("cohorts")
+}
+
+model Hackathon {
+  id             String    @id @default(cuid())
+  cohortId       String
+  title          String
+  slug           String    @unique             // "solana-2025" — used in public URLs
+  description    String                        // Plain text, medium length
+  startsAt       DateTime
+  endsAt         DateTime
+  externalUrl    String                        // Colosseum, XRPL Korea, etc.
+  coverImageUrl  String?                       // Paste-only URL, nullable
+  track          String                        // Free-text: "EVM", "Solana", "Grants"
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  cohort         Cohort    @relation(fields: [cohortId], references: [id], onDelete: Cascade)
+  teams          Team[]
+
+  @@index([cohortId])
+  @@map("hackathons")
+}
+
+model Team {
+  id           String    @id @default(cuid())
+  hackathonId  String
+  name         String
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  hackathon    Hackathon   @relation(fields: [hackathonId], references: [id], onDelete: Cascade)
+  members      Member[]
+  updates      Update[]
+  submission   Submission?
+
+  @@index([hackathonId])
+  @@map("teams")
+}
+
+model Member {
+  id        String    @id @default(cuid())
+  teamId    String
+  name      String
+  role      String                        // Free-text: "Frontend", "Smart Contract Dev"
+  joinedAt  DateTime  @default(now())
+
+  team      Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
+  @@index([teamId])
+  @@map("members")
+}
+
+model Update {
+  id         String    @id @default(cuid())
+  teamId     String
+  content    String
+  link       String?                      // Optional URL
+  weekNumber Int?                         // Optional; enables ordering by week
+  createdAt  DateTime  @default(now())
+
+  team       Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
+  @@index([teamId])
+  @@map("updates")
+}
+
+model Submission {
+  id          String    @id @default(cuid())
+  teamId      String    @unique           // One submission per team
+  githubUrl   String
+  writeup     String
+  submittedAt DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  team        Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
+  @@map("submissions")
+}
