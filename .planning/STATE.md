@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 04-01-PLAN.md
-last_updated: "2026-03-18T17:13:56.410Z"
+stopped_at: Completed 04-02-PLAN.md
+last_updated: "2026-03-18T17:19:15.794Z"
 last_activity: 2026-03-19 — Completed Plan 03-02 (TeamForm, team edit page, submissions overview; visual verification approved)
 progress:
   total_phases: 4
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 12
-  completed_plans: 11
+  completed_plans: 12
   percent: 100
 ---
 
@@ -58,6 +58,7 @@ Progress: [██████████] 100%
 | Phase 03-admin-management P01 | 3min | 2 tasks | 3 files |
 | Phase 03-admin-management P02 | 2min | 2 tasks | 3 files |
 | Phase 04-cohort-archive P01 | 2min | 2 tasks | 5 files |
+| Phase 04-cohort-archive P02 | 3min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -98,6 +99,8 @@ Recent decisions affecting current work:
 - [Phase 03-admin-management]: TeamForm uses typed TeamFormState — consistent with typed action signature from admin-teams.ts
 - [Phase 04-cohort-archive]: toggleCohortArchive form action uses type cast (as unknown as () => void) since HTML form actions cannot surface non-void return values
 - [Phase 04-cohort-archive]: prisma generate must be run after db push — client types are not updated by db push alone
+- [Phase 04-cohort-archive]: notFound() on create-team for archived cohorts — direct URL access blocked since link is already hidden on hackathon page
+- [Phase 04-cohort-archive]: isArchived derived from team.hackathon.cohort.isActive include chain — no extra DB query needed
 
 ### Pending Todos
 
@@ -111,6 +114,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T17:13:56.405Z
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-03-18T17:19:15.790Z
+Stopped at: Completed 04-02-PLAN.md
 Resume file: None
