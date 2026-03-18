@@ -25,3 +25,43 @@ export type HackathonFormState = {
   errors?: Partial<Record<keyof z.infer<typeof HackathonSchema>, string[]>>
   message?: string
 }
+
+export const TeamSchema = z.object({
+  name: z.string().min(1, 'Team name is required').max(100).trim(),
+})
+
+export const MemberSchema = z.object({
+  name: z.string().min(1, 'Your name is required').max(100).trim(),
+  role: z.string().min(1, 'Your role is required').max(100).trim(),
+})
+
+export const UpdateSchema = z.object({
+  content: z.string().min(1, 'Update content is required').max(2000).trim(),
+  link: z.string().url('Must be a valid URL').optional().or(z.literal('')),
+})
+
+export const SubmissionSchema = z.object({
+  githubUrl: z.string().url('Must be a valid GitHub URL'),
+  writeup: z.string().min(1, 'Writeup is required').max(5000).trim(),
+})
+
+export type TeamFormState = {
+  errors?: { name?: string[] }
+  message?: string
+}
+
+export type MemberFormState = {
+  errors?: { name?: string[]; role?: string[] }
+  error?: string
+  message?: string
+}
+
+export type UpdateFormState = {
+  errors?: { content?: string[]; link?: string[] }
+  message?: string
+}
+
+export type SubmissionFormState = {
+  errors?: { githubUrl?: string[]; writeup?: string[] }
+  message?: string
+}
