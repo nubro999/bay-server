@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import { format } from 'date-fns'
 import { prisma } from '@/app/lib/db'
 import { JoinTeamForm } from '@/app/ui/public/JoinTeamForm'
+import { UpdateForm } from '@/app/ui/public/UpdateForm'
+import { SubmissionForm } from '@/app/ui/public/SubmissionForm'
 
 export default async function TeamDetailPage({
   params,
@@ -149,6 +151,18 @@ export default async function TeamDetailPage({
         )}
       </div>
 
+      {/* Post an update */}
+      <div className="border-t border-zinc-100 pt-6 mt-6">
+        <h2 className="text-base font-medium text-zinc-900 mb-4">Post an Update</h2>
+        <div className="max-w-sm">
+          <UpdateForm
+            teamId={teamId}
+            cohortSlug={cohortSlug}
+            hackathonSlug={hackathonSlug}
+          />
+        </div>
+      </div>
+
       {/* Submission */}
       <div className="border-t border-zinc-100 pt-6 mt-6">
         <h2 className="text-base font-medium text-zinc-900 mb-4">Submission</h2>
@@ -180,6 +194,20 @@ export default async function TeamDetailPage({
         ) : (
           <p className="text-sm text-zinc-500">No submission yet.</p>
         )}
+
+        <div className="border-t border-zinc-100 pt-6 mt-6">
+          <h3 className="text-sm font-medium text-zinc-900 mb-4">
+            {team.submission ? 'Update Submission' : 'Submit Project'}
+          </h3>
+          <div className="max-w-sm">
+            <SubmissionForm
+              teamId={teamId}
+              cohortSlug={cohortSlug}
+              hackathonSlug={hackathonSlug}
+              existingSubmission={team.submission}
+            />
+          </div>
+        </div>
       </div>
     </div>
   )
