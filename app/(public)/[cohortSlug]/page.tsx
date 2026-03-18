@@ -62,8 +62,7 @@ export default async function CohortPage({
                     href={hackathon.externalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1.5 bg-zinc-900 text-white text-xs px-3 py-1.5 rounded-md hover:bg-zinc-800 transition-colors"
+                    className="relative z-10 inline-flex items-center gap-1.5 bg-zinc-900 text-white text-xs px-3 py-1.5 rounded-md hover:bg-zinc-800 transition-colors"
                   >
                     <ExternalLink className="h-3.5 w-3.5" />
                     Apply
