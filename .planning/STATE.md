@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 02-member-experience/02-04-PLAN.md — Phase 2 fully complete, visual checkpoint approved
-last_updated: "2026-03-18T16:29:34.853Z"
+stopped_at: Completed 03-admin-management/03-01-PLAN.md
+last_updated: "2026-03-18T16:47:10.617Z"
 last_activity: 2026-03-19 — Completed Plan 02-04 (UpdateForm + SubmissionForm, visual checkpoint approved)
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 8
-  completed_plans: 8
+  total_plans: 10
+  completed_plans: 9
   percent: 50
 ---
 
@@ -55,6 +55,7 @@ Progress: [█████░░░░░] 50%
 | Phase 01-foundation P04 | 3min | 2 tasks | 6 files |
 | Phase 02-member-experience P01 | 7min | 2 tasks | 11 files |
 | Phase 02-member-experience P02 | 8min | 2 tasks | 6 files |
+| Phase 03-admin-management P01 | 3min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -90,6 +91,8 @@ Recent decisions affecting current work:
 - [Phase 02-member-experience]: SubmissionForm pre-fills from existingSubmission prop enabling upsert UX without page reload
 - [02-04]: Admin auth simplified to plain password comparison — bcrypt hash was causing login failures during testing
 - [02-04]: Login redirect corrected to /admin/cohorts (not /admin) — /admin has no page, cohorts list is the landing
+- [Phase 03-admin-management]: removeMember takes both memberId and teamId — DB only needs memberId but UI binds both via .bind(null, m.id, team.id)
+- [Phase 03-admin-management]: Teams page has no create button — teams are created by participants via public join flow, not by admins
 
 ### Pending Todos
 
@@ -103,6 +106,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T00:00:00Z
-Stopped at: Completed 02-member-experience/02-04-PLAN.md — Phase 2 fully complete, visual checkpoint approved
+Last session: 2026-03-18T16:47:10.612Z
+Stopped at: Completed 03-admin-management/03-01-PLAN.md
 Resume file: None

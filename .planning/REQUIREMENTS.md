@@ -36,7 +36,7 @@
 
 - [x] **ADMN-01**: Admin panel protected by shared password (bcrypt-hashed)
 - [x] **ADMN-02**: Admin can create, edit, and delete hackathons
-- [ ] **ADMN-03**: Admin can manage teams (edit, delete) and remove members
+- [x] **ADMN-03**: Admin can manage teams (edit, delete) and remove members
 - [x] **ADMN-04**: Admin can create and manage cohorts
 
 ### Design
@@ -88,7 +88,7 @@
 | PROG-03 | Phase 2 | Complete |
 | ADMN-01 | Phase 1 | Complete |
 | ADMN-02 | Phase 1 | Complete |
-| ADMN-03 | Phase 3 | Pending |
+| ADMN-03 | Phase 3 | Complete |
 | ADMN-04 | Phase 1 | Complete |
 | DSGN-01 | Phase 2 | Complete |
 | DSGN-02 | Phase 2 | Complete |
