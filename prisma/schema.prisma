@@ -3,14 +3,12 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../node_modules/.prisma/client"
 }
 
 // Note: datasource url is managed by prisma.config.ts (Prisma 7)
-// The env("DATABASE_URL") here is for IDE tooling; prisma.config.ts takes precedence at runtime
+// Prisma 7 removed url from datasource block — connection is via prisma.config.ts
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 model Cohort {
