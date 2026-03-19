@@ -14,3 +14,9 @@ export const verifySession = cache(async () => {
 
   return { isAdmin: true as const }
 })
+
+export const checkSession = cache(async () => {
+  const cookie = (await cookies()).get('admin_session')?.value
+  const session = await decrypt(cookie)
+  return !!session?.isAdmin
+})
