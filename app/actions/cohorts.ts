@@ -71,3 +71,16 @@ export async function updateCohort(id: string, state: unknown, formData: FormDat
   revalidatePath('/admin/cohorts')
   redirect('/admin/cohorts')
 }
+
+export async function deleteCohort(id: string) {
+  await verifySession()
+
+  try {
+    await prisma.cohort.delete({ where: { id } })
+  } catch {
+    return { error: 'Cohort not found or could not be deleted' }
+  }
+
+  revalidatePath('/admin/cohorts')
+  revalidatePath('/')
+}

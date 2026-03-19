@@ -1,7 +1,8 @@
 import { verifySession } from '@/app/lib/dal'
 import { prisma } from '@/app/lib/db'
-import { toggleCohortArchive } from '@/app/actions/cohorts'
+import { toggleCohortArchive, deleteCohort } from '@/app/actions/cohorts'
 import Link from 'next/link'
+import { DeleteCohortButton } from '@/app/ui/admin/DeleteCohortButton'
 
 export default async function AdminCohortsPage() {
   await verifySession()
@@ -60,6 +61,11 @@ export default async function AdminCohortsPage() {
                 >
                   Edit
                 </Link>
+                <DeleteCohortButton
+                  cohortId={cohort.id}
+                  cohortName={cohort.name}
+                  hackathonCount={cohort._count.hackathons}
+                />
               </div>
             </div>
           ))}
