@@ -13,7 +13,8 @@ BAY Server is a straightforward CRUD web application for Blockchain Academy Yons
 
 The recommended approach is to start with a correct, cohort-scoped schema before writing a single API route. Every entity in the system (Hackathon, Team, Member, Update, Submission) must be scoped under a Cohort from day one — retrofitting this constraint after live data exists is expensive. The feature set is deliberately constrained: zero high-complexity features are in scope, all high-complexity anti-features (real-time chat, file upload, member auth, voting) are explicitly excluded. This means the build is achievable in a series of focused phases without research uncertainty blocking any phase.
 
-The primary risks are: (1) ghost member accumulation on full teams due to the no-auth model — mitigated by building admin member-removal on day one, not as an afterthought; (2) the 5-member cap being violated by a race condition — mitigated by a database-level constraint combined with row-locking on the join transaction; (3) the admin password being stored insecurely — mitigated by bcrypt hashing and treating `.env` as sensitive from the first commit. None of these risks require design changes; they require discipline during implementation.
+The primary risks are: (1) ghost member accumulation on full teams due to the no-auth model — mitigated by building admin member-removal on day one, not as an afterthought; (2) the 5-member c
+ap being violated by a race condition — mitigated by a database-level constraint combined with row-locking on the join transaction; (3) the admin password being stored insecurely — mitigated by bcrypt hashing and treating `.env` as sensitive from the first commit. None of these risks require design changes; they require discipline during implementation.
 
 ---
 
