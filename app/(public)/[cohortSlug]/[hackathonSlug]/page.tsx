@@ -70,7 +70,7 @@ export default async function HackathonPage({
           </span>
         </div>
         <h1 className="text-2xl font-semibold text-zinc-900 mb-2">{hackathon.title}</h1>
-        <p className="text-sm text-zinc-600 mb-3">{hackathon.description}</p>
+        <p className="text-sm text-zinc-600 mb-3 whitespace-pre-line">{hackathon.description}</p>
         <p className="text-xs text-zinc-400 mb-4">
           {format(hackathon.startsAt, 'MMM d, yyyy')} — {format(hackathon.endsAt, 'MMM d, yyyy')}
         </p>

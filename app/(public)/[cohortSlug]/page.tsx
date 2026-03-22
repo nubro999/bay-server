@@ -68,7 +68,7 @@ export default async function CohortPage({
                     </span>
                   </div>
                   <h2 className="text-base font-medium text-zinc-900 mb-1">{hackathon.title}</h2>
-                  <p className="text-sm text-zinc-600 line-clamp-2 mb-2">{hackathon.description}</p>
+                  <p className="text-sm text-zinc-600 line-clamp-2 mb-2 whitespace-pre-line">{hackathon.description}</p>
                   <p className="text-xs text-zinc-400">
                     {format(hackathon.startsAt, 'MMM d, yyyy')} — {format(hackathon.endsAt, 'MMM d, yyyy')}
                   </p>
