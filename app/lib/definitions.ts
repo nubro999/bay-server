@@ -14,6 +14,7 @@ export const HackathonSchema = z.object({
   externalUrl:   z.string().url(),
   coverImageUrl: z.string().url().optional().or(z.literal('')),
   track:         z.string().min(1).max(100).trim(),
+  maxMembers:    z.coerce.number().int().min(1).max(100).default(5),
 })
 
 export type CohortFormState = {

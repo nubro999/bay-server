@@ -42,6 +42,7 @@ export default async function EditHackathonPage({ params }: { params: Promise<{ 
           externalUrl: hackathon.externalUrl,
           coverImageUrl: hackathon.coverImageUrl ?? '',
           track: hackathon.track,
+          maxMembers: hackathon.maxMembers,
         }}
         submitLabel="Save Changes"
       />

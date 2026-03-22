@@ -17,6 +17,7 @@ type HackathonFormProps = {
     externalUrl?: string
     coverImageUrl?: string
     track?: string
+    maxMembers?: number
   }
   submitLabel?: string
 }
@@ -97,6 +98,13 @@ export function HackathonForm({
         <Label htmlFor="track">Track</Label>
         <Input id="track" name="track" defaultValue={defaultValues.track} required placeholder="e.g. EVM, Solana, Grants" />
         {errors.track && <p className="text-sm text-red-600">{errors.track[0]}</p>}
+      </div>
+
+      {/* Max Members */}
+      <div className="space-y-2">
+        <Label htmlFor="maxMembers">Max Members per Team</Label>
+        <Input id="maxMembers" name="maxMembers" type="number" min={1} max={100} defaultValue={defaultValues.maxMembers ?? 5} />
+        {errors.maxMembers && <p className="text-sm text-red-600">{errors.maxMembers[0]}</p>}
       </div>
 
       {(state as any)?.message && (

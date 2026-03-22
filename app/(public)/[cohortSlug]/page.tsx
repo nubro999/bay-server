@@ -52,6 +52,14 @@ export default async function CohortPage({
               href={`/${cohortSlug}/${hackathon.slug}`}
               className="block rounded-lg border border-zinc-100 bg-white p-4 hover:border-zinc-300 transition-colors"
             >
+              {hackathon.coverImageUrl && (
+                <img
+                  src={hackathon.coverImageUrl}
+                  alt={hackathon.title}
+                  className="w-full h-32 object-cover rounded-t-lg -mt-4 -mx-4 mb-3"
+                  style={{ width: 'calc(100% + 2rem)' }}
+                />
+              )}
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2 mb-2">

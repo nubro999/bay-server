@@ -44,6 +44,17 @@ export default async function HackathonPage({
 
   return (
     <div>
+      {/* Cover Image */}
+      {hackathon.coverImageUrl && (
+        <div className="mb-6 rounded-lg overflow-hidden">
+          <img
+            src={hackathon.coverImageUrl}
+            alt={hackathon.title}
+            className="w-full h-48 object-cover"
+          />
+        </div>
+      )}
+
       {/* Header */}
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-2">

@@ -24,8 +24,13 @@ export async function joinTeam(
 
   try {
     await prisma.$transaction(async (tx) => {
+      const team = await tx.team.findUniqueOrThrow({
+        where: { id: context.teamId },
+        select: { hackathon: { select: { maxMembers: true } } },
+      })
+      const maxMembers = team.hackathon.maxMembers
       const count = await tx.member.count({ where: { teamId: context.teamId } })
-      if (count >= 5) {
+      if (count >= maxMembers) {
         throw new Error('TEAM_FULL')
       }
       await tx.member.create({
@@ -38,7 +43,7 @@ export async function joinTeam(
     })
   } catch (err) {
     if (err instanceof Error && err.message === 'TEAM_FULL') {
-      return { error: 'This team is full (maximum 5 members).' }
+      return { error: 'This team is full.' }
     }
     return { error: 'Could not join team. Please try again.' }
   }
