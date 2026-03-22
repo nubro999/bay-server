@@ -14,8 +14,9 @@ export default async function PublicLayout({
         <div className="mx-auto max-w-3xl px-4 py-4 sm:px-8 flex items-center justify-between">
           <Link
             href="/"
-            className="text-lg font-semibold text-zinc-900 hover:text-zinc-700 transition-colors"
+            className="flex items-center gap-2 text-lg font-semibold text-zinc-900 hover:text-zinc-700 transition-colors"
           >
+            <img src="/bay-logo.png" alt="BAY" className="h-7 w-7" />
             BAY
           </Link>
           <Link

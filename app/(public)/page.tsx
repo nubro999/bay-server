@@ -12,11 +12,20 @@ export default async function CohortsPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold text-zinc-900 mb-1">BAY Cohorts</h1>
-      <p className="text-sm text-zinc-500 mb-8">Browse hackathon tracks by cohort</p>
+      {/* Hero */}
+      <div className="text-center mb-12">
+        <img src="/bay-logo.png" alt="BAY" className="h-20 w-20 mx-auto mb-4" />
+        <h1 className="text-3xl font-bold text-zinc-900 mb-2">BAY Hackathon</h1>
+        <p className="text-zinc-500">
+          Build And Yield — Yonsei Blockchain hackathon platform for builders.
+        </p>
+      </div>
 
+      {/* Active Cohorts */}
       {cohorts.length === 0 ? (
-        <p className="text-zinc-500 text-sm">No cohorts yet.</p>
+        <div className="text-center py-12 border border-zinc-100 rounded-lg">
+          <p className="text-zinc-500 text-sm">No cohorts yet. Check back soon!</p>
+        </div>
       ) : (
         <>
           <ul className="space-y-2">
